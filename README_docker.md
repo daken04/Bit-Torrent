@@ -31,4 +31,4 @@ make
 ```
 
 ## NOTE
-- We cannot access local system things inside of out container.
+- We cannot access local system things inside of our container.
