@@ -147,7 +147,7 @@ void* runAsServer(void* arg){
     } 
     writeLog(" Server socket created.");
 
-    if (setsockopt(server_socket, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt))) { 
+    if (setsockopt(server_socket, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt))) { 
         perror("setsockopt"); 
         exit(EXIT_FAILURE); 
     } 

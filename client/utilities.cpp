@@ -97,6 +97,8 @@ int connectToTracker(int trackerNum, struct sockaddr_in &serv_addr, int sock){
         curTrackPort = tracker2_port;
     }
 
+    // cout<<curTrackPort<<endl;
+
     bool err = 0;
 
     serv_addr.sin_family = AF_INET; 
@@ -111,8 +113,10 @@ int connectToTracker(int trackerNum, struct sockaddr_in &serv_addr, int sock){
     if(err){
         if(trackerNum == 1)
             return connectToTracker(2, serv_addr, sock);
-        else
+        else{
+            cout<<"this is the issue"<<endl;
             return -1;
+        }
     }
     writeLog("connected to server " + to_string(curTrackPort));
     return 0;

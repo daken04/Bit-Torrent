@@ -24,7 +24,7 @@ void getStringHash(string segmentString, string& hash){
     else{
         for(int i=0; i<20; i++){
             char buf[3];
-            sprintf(buf, "%02x", md[i]&0xff); // to make it human readable, we make 20B Sha to 40B hexa representation, where per char we convert to 2B hexa
+            sprintf(buf, "%02x", md[i]&0xff);
             hash += string(buf);
         }
     }
@@ -35,6 +35,7 @@ void getStringHash(string segmentString, string& hash){
 /*        Returns combined PIECEWISE hash of the file        */
 /*************************************************************/
 string getHash(char* path){
+    
     int  i, accum;
     FILE *fp1;
 
@@ -62,6 +63,7 @@ string getHash(char* path){
             }
 
             getStringHash(segmentString, hash);
+
         }
         
         fclose(fp1);

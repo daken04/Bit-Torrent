@@ -1,9 +1,9 @@
 #include "client_header.h"
 
 int list_groups(int sock){
-    // char dum[5];
-    // strcpy(dum, "test");
-    // write(sock, dum, 5);
+    char dum[5];
+    strcpy(dum, "test");
+    write(sock, dum, 5);
 
     char reply[3*SIZE];
     memset(reply, 0, sizeof(reply));
@@ -111,7 +111,6 @@ int processCMD(vector<string> inpt, int sock){
         return uploadFile(inpt, sock);
     }
     else if(inpt[0] == "download_file"){
-        
         if(string(server_reply) == "Error 101:"){
             cout << "Group doesn't exist" << endl;
             return 0;

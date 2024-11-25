@@ -13,6 +13,7 @@ typedef struct reqdChunkDetails{
     string destination;
 } reqdChunkDetails;
 
+
 void sendChunk(char* filepath, int chunkNum, int client_socket){
 
     std::ifstream fp1(filepath, std::ios::in|std::ios::binary);
@@ -294,4 +295,4 @@ int uploadFile(vector<string> inpt, int sock){
     setChunkVector(filename, 0, stoll(filesize)/FILE_SEGMENT_SZ + 1, true);
 
     return 0;
-} 
+}

@@ -1,5 +1,5 @@
 CC = g++
-CFLAGS = -Wall -I/opt/homebrew/Cellar/openssl@3/3.3.2/include
+CFLAGS = -Wall
 DEPS = tracker_header.h
 OBJ = tracker.o commands.o utilities.o
 %.o: %.cpp $(DEPS)

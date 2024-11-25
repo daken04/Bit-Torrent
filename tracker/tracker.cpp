@@ -35,7 +35,7 @@ int main(int argc, char *argv[]){
     } 
     writeLog("Tracker socket created.");
        
-    if (setsockopt(tracker_socket, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt))) { 
+    if (setsockopt(tracker_socket, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt))) { 
         perror("setsockopt"); 
         exit(EXIT_FAILURE); 
     } 

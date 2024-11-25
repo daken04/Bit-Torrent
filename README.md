@@ -1,10 +1,11 @@
 # Bit Torrent : Peer-to-Peer Group Based File Sharing System
 
-- The Bit-torrent project is basically a peer-to-peer file sharing network. The user
+- The Mini-torrent project is basically a peer-to-peer file sharing network. The user
 has functionalities like sharing a file, downloading a file, removing a file from
 sharing etc. It is basically like the Bit-Torrent we have on the internet.
 - The architecture is such that there are multiple clients(users) and a tracker which stores the
 metadata of which all users have a file, basically a file-user mapping.
+
 
 ## Prerequisites
 
@@ -16,7 +17,7 @@ metadata of which all users have a file, basically a file-user mapping.
 
    - **To install OpenSSL library :** `sudo apt-get install openssl`
 
-**Platform:** Linux <br/>
+**Platform:** Linux (to run on other devices, I have mentioned docker steps in README_docker.md)<br/>
 
 ## Installation
 

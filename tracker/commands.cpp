@@ -79,7 +79,6 @@ void uploadFile(vector<string> inpt, int client_socket, string client_uid){
             
             write(client_socket, "Uploaded", 8);
         }
-        
     }
 }
 
@@ -156,8 +155,8 @@ void list_groups(vector<string> inpt, int client_socket){
     }
     write(client_socket, "All groups:", 11);
 
-    // char dum[5];
-    // read(client_socket, dum, 5);
+    char dum[5];
+    read(client_socket, dum, 5);
 
     if(allGroups.size() == 0){
         write(client_socket, "No groups found$$", 18);
